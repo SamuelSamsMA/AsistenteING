@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculos de ingeniería 1.0</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="cabecera">
+        <div class="cabecera__titulo">
+            <h1>Asistente para cálculos de ingeniería</h1>
+            <p>A continuación se proporcionan varias calculadoras de instalaciones y dispositivos eléctricos/electrónicos con el objetivo de acelerar la toma de decisiones en la resolución de problemas comunes en ingeniería.
+               Estos resultados solo deben tomarse como punto de partida y quedan a criterio personal.</p>
+        </div>
+    </header>
+    <main>
+        <div class="tarjeta">
+            <div class="tarjeta__titulo">
+                <p>Conductores y tubería para motores</p>
+            </div>
+            <form class="tarjeta__formulario" id="motores_formulario">
+                <ul>
+                    <li>
+                        <label for="potencia-motor">Potencia del motor [hp]:</label>
+                        <input type="number" id="potencia-motor" min="0" step="0.25" required>
+                    </li>
+                    <li>
+                        <label for="voltaje-motor">Voltaje de línea [V]:</label>
+                        <input type="number" id="voltaje-motor" min="110" max="500" required>
+                    </li>
+                    <li>
+                        <label for="fp-motor">Factor de potencia:</label>
+                        <input type="number" id="fp-motor" min="0" max="1" step="0.01" value="0.85" required>
+                    </li>
+                    <li>
+                        <label for="eficiencia-motor">Eficiencia:</label>
+                        <input type="number" id="eficiencia-motor" min="0" max="1" step="0.01" value="0.9" required>
+                    </li>
+                    <li>
+                        <label for="grado-proteccion-motor">Grado de protección ITM:</label>
+                        <input type="number" id="grado-proteccion-motor" min="1.5" max="2.5" step="0.5" value="2" required>
+                    </li>
+                    <li class="tarjeta__formulario--calcular">
+                        <input type="submit" value="Calcular">
+                    </li>
+                </ul>
+            </form>
+            <div class="tarjeta__resultados">
+                <ul>
+                    <li>
+                        <label for="corriente-motor">Corriente nominal [A]:</label>
+                        <input type="number" id="corriente-motor" min="0" step="0.01" value="0">
+                    </li>
+                    <li>
+                        <label for="conductor-motor">Calibre de cable [AWG/kcmil]:</label>
+                        <input type="text" id="conductor-motor">
+                    </li>
+                    <li>
+                        <label for="tamaño-ITM">Tamaño del ITM [A]:</label>
+                        <input type="number" id="tamaño-ITM">
+                    </li>
+                    <li>
+                        <label for="tierra-motor">Puesta a tierra [AWG/kcmil]:</label>
+                        <input type="text" id="tierra-motor">
+                    </li>
+                    <li>
+                        <label for="tuberia-motor">Tubo conduit [in]:</label>
+                        <input type="text" id="tuberia-motor">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="./codigo_JS/motores.js"></script>
+    <script src="./codigo_JS/tablas.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+:root {
+    --main-orange: #f7931a;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+
+.cabecera {
+    width: 100%;
+    min-width: 320px;
+    text-align: center;
+    background-color: var(--main-orange);
+}
+
+.cabecera__titulo {
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.cabecera__titulo h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 2.2rem;
+    color: white;
+    padding-top: 15px;
+}
+
+.cabecera__titulo p {
+    font-size: 1.4rem;
+    font-weight: normal;
+    color: black;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.tarjeta {
+    width: 90%;
+    min-width: 288px;
+    max-width: 330px;
+    margin: 20px auto 10px;         /* arriba | horizontal | abajo */
+    border: 0.2rem solid #ccc;
+    border-radius: 10px;
+}
+
+.tarjeta__titulo p {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    color: red;
+    margin: 5px 0 5px 0;
+}
+
+.tarjeta__formulario ul, .tarjeta__resultados ul {
+    list-style: none;
+    margin: 15px 15px;
+    font-size: 1.4rem;
+}
+
+/* Separa los item del formulario */
+.tarjeta__formulario li + li, .tarjeta__resultados li + li {
+    margin-top: 1rem;
+}
+
+.tarjeta__formulario label, .tarjeta__resultados label {
+    display: inline-block;
+    text-align: left;
+    width: calc(100% - 75px);
+}
+
+.tarjeta__formulario input, .tarjeta__resultados input {
+    width: 70px;
+    display: inline-block;
+}
+
+.tarjeta__formulario--calcular input {
+    position: relative;
+    width: 80px;
+    margin-left: calc(50% - 40px);
+}
+
+.tarjeta__resultados--recalc button {
+    position: relative;
+    width: 100px;
+    margin-left: calc(50% - 50px);
+}
+
